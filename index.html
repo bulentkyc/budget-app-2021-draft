@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>My Budget App</h1>
+    <form onsubmit="addToTable(event)" >
+        <fieldset>
+            <legend>Transaction</legend>
+            <label for="amount">Amount:</label>
+            <input type="number" name="q" id="amount" min="5" required>
+        
+            <select name="currency" id="cur">
+                <option value="EUR">EUR</option>
+                <option value="USD" selected>USD</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+
+            <br>
+
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" value="2021-11-08">
+
+            <h3>Type</h3>
+            <input type="radio" name="type" id="income" value="in">
+            <label for="income">Income</label>
+
+            <input type="radio" name="type" id="outcome" value="out">
+            <label for="outcome">Outcome</label>
+
+            <h3>For</h3>
+            <input type="checkbox" name="for" id="myself" value="Myself">
+            <label for="myself">Myself</label>
+
+            <input type="checkbox" name="for" id="friend" value="Friends">
+            <label for="friends">Friends</label>
+
+            <input type="checkbox" name="for" id="family" value="Family">
+            
+            <label for="family">Family</label>
+            
+            <h3>Notes</h3>
+            <textarea name="notes" id="exp" cols="35" rows="5" placeholder="Please type your notes here.."></textarea>
+
+            <br>
+
+            <input type="submit" value="Save">
+        </fieldset>
+    </form>
+
+    <h1>Transections</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Explanation</th>
+                <th>Type</th>
+                <th>For</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+            <tr>
+                <td>2021-11-08</td>
+                <td>100 EUR</td>
+                <td>Lunch</td>
+                <td>In</td>
+                <td>Myself</td>
+            </tr>
+            <tr>
+                <td>2021-11-08</td>
+                <td>100 EUR</td>
+                <td>Lunch</td>
+                <td>In</td>
+                <td>Myself</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>2021-11-08</td>
+                <td>100 EUR</td>
+                <td>Lunch</td>
+                <td>In</td>
+                <td>Myself</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
+
+
+
+<!-- {
+    amount: 100,
+    currency: EUR,
+    type: out,
+    for: Myself
+} -->
